@@ -9,7 +9,7 @@ PATH_FIGURES= 'figures'
 def make_figrue(data: np.ndarray, file_name:str) ->None: 
     '''Inputs
     '''
-    full_filename= os.path.join(PATH_FIGURES, filename)
+    full_filename= os.path.join(PATH_FIGURES, file_name)
 
     if not os.path.exists(PATH_FIGURES): 
         os.mkdir(PATH_FIGURES)
