@@ -6,7 +6,7 @@ PATH_FIGURES= 'figures'
 
 #This file shpuld contain code that makes figures, and does nothing else 
 
-def make_figrue(data: np.ndarray, file_name:str) ->None: 
+def make_figrue(data: np.ndarray, filename:str) ->None: 
     '''Inputs
     '''
     full_filename = os.path.join(PATH_FIGURES, filename)
