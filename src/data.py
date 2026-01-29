@@ -23,14 +23,14 @@ def save_data(data:np.array, filename:str) -> None:
         raise TypeError(f'data should be a numpy array, but a {type(data)} was provided')
     
     #Dont overwrite 
+    if os.path.exists(full_filename): 
+        raise FileExistsError (f'file {full_filename} already exists')
+    
+    np.save(full_filename, data)
+    return None
 
-if os.path.exists(full_filename): 
-    raise FileExistsError (f'file {full_filename} already exists')
-
-np.save(full_filename, data)
-
-def load_data(file_name: str) -> np.ndarray: 
+def load_data(filename: str) -> np.ndarray: 
     '''
     load_data
     '''
-    return np.load(os.path.join(PATH_DATA))
+    return np.load(os.path.join(PATH_DATA, filename))
