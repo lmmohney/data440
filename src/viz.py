@@ -9,11 +9,13 @@ PATH_FIGURES= 'figures'
 def make_figrue(data: np.ndarray, file_name:str) ->None: 
     '''Inputs
     '''
-    full_filename= os.path.join(PATH_FIGURES, file_name)
+    full_filename = os.path.join(PATH_FIGURES, filename)
 
-    if not os.path.exists(PATH_FIGURES): 
+    if not os.path.exists(PATH_FIGURES):
         os.mkdir(PATH_FIGURES)
-
+    
     plt.figure(figsize=(6,6))
-    plt.scatter(data[:,0], datra[;,a])
-    plt.savefig()
+    plt.scatter(data[:, 0], data[:, 1])
+    plt.savefig(full_filename, bbox_inches='tight')
+    plt.show()
+    return None
